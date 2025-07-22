@@ -1,3 +1,22 @@
 body {
   background-color: cornflowerblue;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 70%;
+  width: 90%;
+}
+
+#frame {
+  background-color: indianred;
+  height: 70%;
+  width: 40%;
 }
