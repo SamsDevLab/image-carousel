@@ -7,26 +7,31 @@ body {
 }
 
 #container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
-  height: 70%;
-  width: 90%;
+  height: 60%;
+  width: 50%;
+  border-radius: 0.5rem;
 }
 
-#frame {
+#image-carousel {
   position: relative;
-  padding: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: indianred;
+  gap: 5rem;
   height: 70%;
-  width: 40%;
+  width: 60%;
+  overflow: hidden;
 }
 
-#arrow-div {
+img {
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+/* #arrow-div {
   position: absolute;
   top: 40%;
   width: 90%;
@@ -55,4 +60,4 @@ li {
 li > button {
   height: 1rem;
   border-radius: 50%;
-}
+} */
