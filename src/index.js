@@ -1,4 +1,6 @@
 import "./styles.css";
 import { greeting } from "./greeting.js";
 
-console.log(greeting);
+import { toggleVisibility } from "@samsdevlab/toggle-visibility";
+
+export { toggleVisibility };
