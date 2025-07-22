@@ -16,7 +16,43 @@ body {
 }
 
 #frame {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: indianred;
   height: 70%;
   width: 40%;
+}
+
+#arrow-div {
+  position: absolute;
+  top: 40%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-btn {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+ul {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+li > button {
+  height: 1rem;
+  border-radius: 50%;
 }
