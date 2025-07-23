@@ -1,5 +1,5 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
+import { movements } from "./movements";
 
 import { toggleVisibility } from "@samsdevlab/toggle-visibility";
 
