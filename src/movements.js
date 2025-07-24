@@ -1,36 +1,43 @@
 export const movements = () => {
   const carousel = document.querySelector("[data-div = 'carousel']");
-  const carouselStyle = window.getComputedStyle(carousel);
 
-  /* Start here when you return from lunch 
-    Need to:
-    - Do a big commit of everything up to this point
-    - Figure out CSS image positioning
-    abstract away the parsedInt in each fn (prev & next)
-    - Look into delete the right when moving left and vice versa (if you move right, then move
-    left, you can't move right again),
-    - See how you can incorporate the dots effectively
-    - Style everything properly
-    */
+  const getCarouselPosition = () => {
+    const carouselStyle = window.getComputedStyle(carousel);
+    const carouselPosition = parseInt(carouselStyle.left);
 
-  const previous = () => {
-    const carouselPositionLeft = carouselStyle.left;
+    return carouselPosition;
+  };
 
-    const parsedInt = parseInt(carouselPositionLeft, 10);
+  const addValueToInt = (parsedInt) => {
     const newInteger = parsedInt + 600;
     const newStr = newInteger.toString() + "px";
 
-    carousel.style.left = newStr;
+    return newStr;
+  };
+
+  const subtractValueFromInt = (int) => {
+    const newInteger = int - 600;
+    const newStr = newInteger.toString() + "px";
+
+    return newStr;
+  };
+
+  const previous = () => {
+    const carouselPosition = getCarouselPosition();
+
+    if (carouselPosition >= -2400 && carouselPosition < 0) {
+      const newStr = addValueToInt(carouselPosition);
+      carousel.style.left = newStr;
+    }
   };
 
   const next = () => {
-    const carouselPositionRight = carouselStyle.right;
+    const carouselPosition = getCarouselPosition();
 
-    const parsedInt = parseInt(carouselPositionRight, 10);
-    const newInteger = parsedInt + 600;
-    const newStr = newInteger.toString() + "px";
-
-    carousel.style.right = newStr;
+    if (carouselPosition > -2400 && carouselPosition <= 0) {
+      const newStr = subtractValueFromInt(carouselPosition);
+      carousel.style.left = newStr;
+    }
   };
 
   const addListenerToPrevious = (button) => {
