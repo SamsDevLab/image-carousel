@@ -8,19 +8,30 @@
   <body>
     <div id="container">
       <div id="image-carousel" data-div="carousel">
-        <img src="./images/hawaiian-beach.jpg" alt="Hawaiian beach" />
-        <img src="./images/hawaiian-mountains.jpg" alt="Hawaiian mountains" />
+        <img
+          src="./images/hawaiian-beach.jpg"
+          alt="Hawaiian beach"
+          data-image="beach"
+        />
+        <img
+          src="./images/hawaiian-mountains.jpg"
+          alt="Hawaiian mountains"
+          data-image="mountains"
+        />
         <img
           src="./images/hawaiian-sunset.jpg"
           alt="Hawaiian sunset with palm trees"
+          data-image="sunset"
         />
         <img
           src="./images/hawaiian-road.jpg"
           alt="Hawaiian road leading to mountains"
+          data-image="road"
         />
         <img
           src="./images/hawaiian-surfboards.jpg"
           alt="Fence made of surfboards"
+          data-image="surfboards"
         />
       </div>
       <div id="arrow-div">
@@ -30,19 +41,19 @@
 
       <ul>
         <li>
-          <button></button>
+          <button data-indicator-btn="beach"></button>
         </li>
         <li>
-          <button></button>
+          <button data-indicator-btn="mountains"></button>
         </li>
         <li>
-          <button></button>
+          <button data-indicator-btn="sunset"></button>
         </li>
         <li>
-          <button></button>
+          <button data-indicator-btn="road"></button>
         </li>
         <li>
-          <button></button>
+          <button data-indicator-btn="surfboards"></button>
         </li>
       </ul>
     </div>
